@@ -1,0 +1,63 @@
+.newsletter-card-container{
+    display: flex;
+    height: 32rem;
+    width: 22rem;
+    background: white;
+    flex-direction: column;
+    color: black;
+    border-radius: 15px;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.newsletter-card-container .newsletter-text{
+    overflow-y: scroll;
+    /*scrollbar-gutter: stable;*/
+    padding: 1rem;
+    height: 100%;
+}
+
+.newsletter-card-container .newsletter-text::-webkit-scrollbar{
+    width: 5px;
+}
+.newsletter-card-container .newsletter-text::-webkit-scrollbar-thumb{
+    background: #a6a6a6;
+    border-radius: 5px;
+}
+
+.newsletter-card-container .newsletter-img{
+    height: 55%;
+    overflow: hidden;
+}
+
+.newsletter-card-container .newsletter-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.newsletter-text p{
+    font-size: 0.9rem;
+}
+
+.newsletter-card-container .newsletter-read-more-btn{
+    padding: 1.5rem;
+}
+.newsletter-card-container .newsletter-read-more-btn a{
+    border: 2px solid red;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 200ms ease-in;
+}
+.newsletter-card-container .newsletter-read-more-btn a:hover{
+    color: white;
+    background: red;
+}
+

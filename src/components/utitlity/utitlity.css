@@ -1,0 +1,32 @@
+.heading-1{
+    font-size: 2.3rem;
+    color: white;
+
+}
+
+.heading-1::before{
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: red;
+    margin-top: 54px;
+}
+
+.paragraph-type-1{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.heading-2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.heading-2 hr{
+    width: 100%;
+    height: 0.3rem;
+    background: rgba(255, 0, 0, 1);
+    border: none;
+    transition: all 300ms ease;
+}

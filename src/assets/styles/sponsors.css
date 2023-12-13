@@ -1,0 +1,110 @@
+#sponsors{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sponsors h1{
+    text-align: center;
+}
+
+#sponsors .sponsors-inner-container{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+    gap: 3rem;
+}
+
+.sponsors-section-1, .sponsors-section-2, .sponsors-section-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sponsors-section-1 h1{
+    margin-bottom: 1rem;
+}
+
+.sponsors-section-1 p{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.sponsors-section-1 .sponsorship-brochure-link>div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsors-section-1 a{
+    border: 2px solid red;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    transition: all 200ms ease-in;
+}
+
+.sponsors-section-1 a:hover{
+    background: red;
+    border-radius: 10px 10px 0 10px;
+}
+
+
+.sponsors-section-2 .title-sponsor-logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sponsors-section-2 .title-sponsor-logos>div{
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+
+.sponsors-section-2 .title-sponsor-logos a{
+    padding: 0 3rem;
+    background: white;
+    max-width: 20rem;
+    min-width: 15rem;
+    width: 100%;
+}
+
+.sponsors-section-2 .title-sponsor-logos img{
+    width: 100%;
+}
+
+
+/*Section 3*/
+.sponsors-section-3 .technical-sponsors-logos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    column-gap: 3rem;
+    row-gap: 0;
+    padding: 2rem;
+}
+
+.sponsors-section-3 .technical-sponsors-logos img{
+    max-width: 12rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px){
+    #sponsors h1{
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,98 @@
+.custom-carousel{
+    width: 100%;
+    height: 45rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.custom-carousel>div{
+    position: relative;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: red;
+    cursor: pointer;
+    margin: 1rem;
+    font-size: 2.5rem;
+}
+.forward-arrow{
+    right: 0;
+}
+.back-arrow{
+    left: 0;
+}
+
+.custom-carousel .lines{
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    transform: translateX(50%);
+    cursor: pointer;
+}
+
+.custom-carousel .lines>div{
+    height: 0.4rem;
+    width: 2rem;
+    background: white;
+    transition: all 200ms ease-out;
+}
+
+.custom-carousel .lines>div:hover{
+    transform: translateY(-20%);
+    background: red;
+}
+
+
+.custom-carousel img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.custom-carousel .slide{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*transform: translateX(-100%);*/
+    opacity: 0;
+    transition: all 500ms ease-in;
+    scale: 1;
+}
+
+.custom-carousel .slide.active{
+    opacity: 100%;
+    /*transform: translateX(0);*/
+    scale: 1.15;
+}
+
+.custom-carousel .title{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    margin-bottom: 3rem;
+}
+
+
+@media  screen and (max-width: 1140px) and (min-width: 500px){
+    .custom-carousel{
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .custom-carousel{
+        height: 20rem;
+    }
+}

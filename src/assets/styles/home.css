@@ -1,0 +1,370 @@
+#home {
+    color: white;
+    position: relative;
+}
+
+#home .home-image .landing-image {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    /*(oldVal-oldMin)*newRange/oldRange + newMin*/
+    translate: 0 calc((-1% * (max(var(--scroll), 15) - 15) * 35 / 85 ));
+    transition: all 100ms linear;
+}
+
+
+.home-image {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-welcome-text{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.home-welcome-text h1{
+    position: absolute;
+    font-size: 4rem;
+    transform: translate(43%, 124%);
+}
+
+.home-welcome-text img{
+    position: absolute;
+    opacity: 0;
+    width: 25rem;
+    transform: translate(8%, 22%);
+}
+
+
+@media screen and (max-width: 1140px){
+    .home-welcome-text h1{
+        display: none;
+    }
+
+    .home-welcome-text img{
+        opacity: 1;
+    }
+
+}
+
+/*Home sections*/
+
+/*Home section 1*/
+
+.home-section-1 {
+    background-color: #171717;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.home-main-text .home-main-text-link {
+    padding-bottom: 2rem;
+}
+
+.home-main-text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.home-main-text p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.home-main-text a {
+    color: white;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.home-main-text a::before {
+    content: "";
+    height: 0.1rem;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    margin-top: 1rem;
+    transform: translate(-50%, 1.8rem);
+    transition: width 100ms ease-out;
+}
+
+.home-main-text a:hover {
+    color: red;
+}
+
+.home-main-text a:hover::before {
+    width: 100%;
+    background: red;
+}
+
+
+/*Home section 2*/
+.home-section-2 {
+    background-color: #ff001d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-section-2 .section-2-inner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.home-section-2 .home-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section-2 .home-stats h1 {
+    font-size: 6rem;
+}
+
+.home-section-2 .home-stats h3 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+/* Home section 3*/
+.home-section-3 {
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-section-3 > div {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem 2rem;
+}
+
+.home-section-3 h1 {
+    font-size: 3rem;
+}
+
+.home-section-3 .car-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    width: 100%;
+    /*height: 30rem;*/
+}
+
+.home-section-3 .car-img-reveal {
+
+}
+
+.home-section-3 .car-text-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-section-3 .car-text-center div {
+    text-align: center;
+}
+
+.home-section-3 img {
+    width: 100%
+}
+
+.home-section-3 .car-img > div {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    align-items: center;
+}
+
+.home-section-3 .car-img > div > h3 {
+    margin-top: 2rem;
+}
+
+.home-section-3 .more-car-btn {
+    padding: 2rem;
+}
+
+.home-section-3 a {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 0.3rem 1.3rem;
+    transition: all 300ms ease-out;
+}
+
+.home-section-3 a:hover {
+    background-color: red;
+    border-radius: 15px 15px 0 15px;
+    border: 2px solid red;
+    box-shadow: 0 2px 8px #464646;
+}
+
+/*Section 4*/
+
+@keyframes logo-slider {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.home-section-4 {
+    height: 20rem;
+    background-color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.home-section-4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: calc(min(400px, 10%));
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), whitesmoke);
+    z-index: 20;
+}
+
+.home-section-4::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: calc(min(400px, 10%));
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), whitesmoke);
+    z-index: 20;
+}
+
+.home-section-4:hover .sponsor-logos {
+    animation-play-state: paused;
+}
+
+.home-section-4 > div {
+    padding: 1rem 0;
+    display: inline-block;
+    animation: 25s logo-slider infinite linear;
+}
+
+.home-section-4 > div img {
+    height: 180px;
+    margin: 40px;
+}
+
+
+@media screen and (max-width: 860px) {
+    .home-section-2 .home-stats h1 {
+        font-size: 5rem;
+    }
+
+    .home-section-2 .home-stats h3 {
+        font-size: 2rem;
+    }
+
+    #home .home-image {
+        height: 30rem;
+    }
+
+    #home .home-image > div {
+        width: 100%;
+        height: 100%;
+    }
+
+    #home .home-image .landing-image {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .home-section-3 .car-img {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home-welcome-text img{
+        width: 15rem;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+    .home-section-2 .section-2-inner {
+        flex-direction: column;
+    }
+
+    #home .home-image {
+        height: 20rem;
+    }
+
+    #home .home-image > div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .home-welcome-text img{
+        width: 10rem;
+    }
+
+    #home .home-image .landing-image {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .home-main-text h1 {
+        font-size: 2rem;
+    }
+
+    .home-main-text p {
+        font-size: 0.9rem;
+    }
+
+    .home-section-3 h1 {
+        font-size: 2.5rem;
+    }
+
+    .sponsor-logos {
+        scale: 0.75;
+    }
+}
+
+
+

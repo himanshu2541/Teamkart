@@ -1,0 +1,255 @@
+/*Mobile navigation*/
+.mobile-nav{
+    display: none;
+}
+
+.navbar-toggle-btn{
+    margin: 2rem;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+    transition: all 300ms ease-in-out;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-toggle-btn:hover{
+    background: #3b3b3b;
+    color: white;
+}
+
+.navbar-toggle-btn-active{
+    /*background: #ff2424;*/
+    color: white;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0000004d;
+    opacity: 0;
+    backdrop-filter: blur(20px);
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 200ms ease-in;
+    z-index: 40;
+    padding: 2rem;
+}
+
+.nav-active{
+    opacity: 100%;
+    transform: translateY(0);
+}
+
+#logo img{
+    width: 10rem;
+}
+
+
+.navbar ul{
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 500ms ease-out;
+}
+
+.nav-active>div{
+    opacity: 100%;
+    transform: translateY(0);
+}
+
+
+.nav-items a{
+    text-decoration: none;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 500;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.nav-items{
+    text-align: center;
+    padding: 0.45rem 1rem;
+    position: relative;
+}
+
+.nav-items::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: width 200ms ease-out;
+}
+
+.nav-items:hover::before{
+    width: 100%;
+    background: red;
+}
+
+.nav-items.active::before{
+    width: 0;
+}
+
+
+/* big screen nav*/
+/* a formula*/
+/* (oldVal-oldMin) * newRange / oldRange + newMin */
+
+.big-screen-nav{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    transition: all 500ms ease-in;
+    height: 6rem;
+    z-index: 1000;
+    width: 100%;
+    backdrop-filter: blur(2px);
+}
+
+
+.big-screen-nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    color: white;
+    height: 100%;
+    z-index: 1002;
+}
+
+.big-screen-nav-links>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.big-screen-nav-items{
+    position: relative;
+    cursor: pointer;
+    transition: all 100ms ease-out;
+    padding: 0.5rem 0;
+}
+
+
+.big-screen-nav-items a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.big-screen-nav-items a:hover{
+    color: red;
+
+}
+
+
+.big-screen-nav-items::before{
+    content: "";
+    height: 0.15rem;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    background: red;
+    transform: translate(-50%, 1.8rem);
+    transition: width 100ms ease-out;
+}
+
+.big-screen-nav-items:hover::before{
+    width: 100%;
+}
+
+#big-screen-nav-logo{
+    position: relative;
+}
+#big-screen-nav-logo img{
+    width: 11rem;
+}
+
+/*back to top btn*/
+.back-to-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    background: white;
+    height: 4rem;
+    width: 4rem;
+    transform: translateX(200%);
+    transition: all 100ms ease-out;
+    z-index: 40;
+}
+
+.back-to-top-btn{
+    color: red;
+    cursor: pointer;
+}
+
+/*social media sidebar*/
+.social-media-sidebar{
+    position: fixed;
+    background: rgba(255, 0, 0, 0.27);
+    right: 0;
+    top: 50%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.5rem 0.5rem;
+    z-index: 40;
+}
+
+.social-media-sidebar svg{
+    color: white;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+}
+.social-media-sidebar svg:hover{
+    color: red;
+}
+
+
+
+@media screen and (max-width: 1140px){
+    .mobile-nav{
+        display: block;
+    }
+    .big-screen-nav{
+        display: none;
+    }
+
+    .social-media-sidebar{
+        /*background: red;*/
+    }
+    .social-media-sidebar svg:hover{
+        color: black;
+    }
+}

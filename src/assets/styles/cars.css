@@ -1,0 +1,57 @@
+
+
+.cars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.cars-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.car-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.car-cards .car-cards-inner-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.car-cards .car-cards-inner-container>div{
+    width: 100%;
+    height: 100%;
+    max-width: 20rem;
+    min-width: 19rem;
+    transition: all 300ms ease-in;
+}
+
+
+
+/*@media screen and (max-width: 1240px){*/
+/*    .car-cards .car-cards-inner-container{*/
+/*        grid-template-columns: auto auto;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 760px){*/
+/*    .car-cards .car-cards-inner-container{*/
+/*        grid-template-columns: auto;*/
+/*    }*/
+/*}*/

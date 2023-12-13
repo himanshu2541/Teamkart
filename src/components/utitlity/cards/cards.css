@@ -1,0 +1,133 @@
+.card{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card.expanded{
+    z-index: 1000;
+}
+
+.card-content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+
+.card-content-popup{
+    position: absolute;
+    color: black;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.card-content-popup.expanded{
+    position: fixed;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    max-width: 50rem;
+    padding: 1rem;
+}
+
+
+.card-content-collapsed{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 30rem;
+}
+
+.card-content-collapsed .image-container{
+    height: 11rem;
+    overflow: hidden;
+}
+.card-content-collapsed .image-container img{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.card-content-expanded{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    padding: 0.5rem;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.car-spec-heading{
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.card-content-expanded .car-specs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.car-specs .car-specs-title{
+    width: 100%;
+    background: #c50000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.car-specs .car-specs-content{
+    width: 100%;
+}
+
+
+
+.card-content-expanded .car-specs .spec{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.card-content-expanded::-webkit-scrollbar{
+    width: 5px;
+}
+.card-content-expanded::-webkit-scrollbar-thumb{
+    background: #a6a6a6;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 860px){
+    .card-content-popup.expanded{
+        width: 80%;
+        height: 80%;
+    }
+}

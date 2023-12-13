@@ -1,0 +1,127 @@
+#about .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*width: 100%;*/
+    color: white;
+    margin: 3rem 2rem;
+    gap: 3rem;
+}
+
+.about-content-heading{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.about-content-para{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+}
+
+.about-img-responsive{
+    width: 100%;
+}
+
+.about-content-para .para{
+    padding-bottom: 1rem;
+}
+
+
+.read-more-btn{
+    margin-bottom: 1rem;
+}
+
+
+.read-more-btn a{
+    padding: 0.25rem 0.5rem;
+    border: 2px solid red;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    font-size: 1.5rem;
+    transition: all 200ms ease-out;
+}
+
+.read-more-btn a:hover{
+    color: white;
+    background: red;
+    border-radius: 15px 15px 15px 0;
+}
+
+/*Formula Student*/
+
+.fs-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fs-inner-container{
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+
+}
+
+.fs-heading{
+    display: flex;
+    align-items: center;
+}
+
+.fs-content{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    /*height: 30rem;*/
+    padding: 1rem 0;
+}
+
+.fs-para{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50%;
+}
+
+
+.fs-image-container{
+    padding: 1rem 0;
+}
+
+
+@media screen and (max-width: 1140px){
+    .about-content-para{
+        flex-direction: column;;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fs-content{
+        flex-direction: column;
+    }
+    .fs-para{
+        max-width: 100%;
+    }
+    .about-para-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 551px){
+    .fs-inner-container .fs-heading h1::before{
+        margin-top: 111px;
+    }
+}
